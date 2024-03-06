@@ -35,7 +35,8 @@ function initJokerHook()
             key = id, 
             rarity = rarity, 
             unlocked = unlocked, 
-            blueprint_compat = blueprint_compat
+            blueprint_compat = blueprint_compat,
+            alerted = true
         }
     
         --add it to all the game tables
