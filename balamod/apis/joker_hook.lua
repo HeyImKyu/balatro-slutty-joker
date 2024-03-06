@@ -8,7 +8,7 @@ mod_author = "arachnei"
 function initJokerHook()
     local jokerHook = {}
 
-    function jokerHook:addJoker(id, name, order, discovered, cost, pos, effect, config, desc, rarity, unlocked)
+    function jokerHook:addJoker(id, name, order, discovered, cost, pos, effect, config, desc, rarity, unlocked, blueprint_compat)
         --defaults
         id = id or "j_Joker_Placeholder" .. #G.P_CENTER_POOLS["Joker"] + 1
         name = name or "Joker Placeholder"
@@ -21,6 +21,7 @@ function initJokerHook()
         desc = desc or {"Placeholder"}
         rarity = rarity or 1
         unlocked = unlocked or true
+        blueprint_compat = blueprint_compat or false
     
         --joker object
         local newJoker = {
@@ -33,7 +34,8 @@ function initJokerHook()
             config = config,
             key = id, 
             rarity = rarity, 
-            unlocked = unlocked
+            unlocked = unlocked, 
+            blueprint_compat = blueprint_compat
         }
     
         --add it to all the game tables
