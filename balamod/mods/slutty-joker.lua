@@ -10,16 +10,23 @@ table.insert(mods,
             {
             mod_id = "slutty_joker",
             name = "Slutty Joker",
-            version = "0.6.9",
+            version = "0.1",
             author = "Kyu & Skadi",
             description = {
                 "Adds the \"Slutty Joker\""
             },
             enabled = true,
             on_post_update = function() 
-                if not patchedSlutty then 
-                    centerHook.addJoker(self, "j_slutty", "Slutty Joker", nil, true, 1, { x = 0, y = 9 }, nil, {extra = 2}, { "{X:red,C:white} X2 {} Mult", "if played hand contains", "a 6 and a 9"}, 1, true)
-        
+                if not patchedSlutty then
+                    
+                    -----------------------------------------
+                    sendDebugMessage("Adding slutty joker to centers!")
+
+                    centerHook.addJoker(self, "j_slutty", "Slutty Joker", nil, true, 1, { x = 0, y = 0 }, nil, {extra = 2}, { "{X:red,C:white} X2 {} Mult", "if played hand contains", "a 6 and a 9"}, 1, true)
+
+                    ---------------------------------------------
+                    sendDebugMessage("Inserting slutty_joker into calculate_joker!")                    
+                    
                     local toReplaceLogic = "if self.ability.name == '8 Ball' and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then"
 
                     local replacementLogic = [[
@@ -45,6 +52,7 @@ table.insert(mods,
                     inject("card.lua", "Card:calculate_joker", toReplaceLogic:gsub("([^%w])", "%%%1"), replacementLogic)
 
                     ------------------------------------------
+                    sendDebugMessage("Adding texture file for slutty joker!")
 
                     local toReplaceAtlas = "{name = 'chips', path = \"resources/textures/\"..self.SETTINGS.GRAPHICS.texture_scaling..\"x/chips.png\",px=29,py=29}"
 
@@ -59,22 +67,23 @@ table.insert(mods,
                     G:set_render_settings()
 
                     -------------------------------------------------------
+                    sendDebugMessage("Adding sprite draw logic for slutty joker!")
 
                     local toReplaceTexLoad = "elseif self.config.center.set == 'Voucher' and not self.config.center.unlocked and not self.params.bypass_discovery_center then"
 
                     local replacementTexLoad = [[
                         elseif _center.name == 'Slutty Joker' then
-                            self.children.center = Sprite(self.T.x, self.T.y, self.T.w, self.T.h, G.ASSET_ATLAS["slutty_joker"], {x=0,y=0})
+                            self.children.center = Sprite(self.T.x, self.T.y, self.T.w, self.T.h, G.ASSET_ATLAS["slutty_joker"], j_slutty)
                         elseif self.config.center.set == 'Voucher' and not self.config.center.unlocked and not self.params.bypass_discovery_center then
                     ]]
 
                     inject("card.lua", "Card:set_sprites", toReplaceTexLoad:gsub("([^%w])", "%%%1"), replacementTexLoad)
 
-                    sendDebugMessage(extractFunctionBody("card.lua", "Card:set_sprites"))
+                    -------------------------------------------------------
 
                     patchedSlutty = true
 
-                    sendDebugMessage("Patched slutty joker mod !")
+                    sendDebugMessage("Patched slutty joker mod!")
                 end
             end,
         }
