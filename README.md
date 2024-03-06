@@ -1,6 +1,6 @@
 [![Balatro](https://www.playbalatro.com/assets/logo2-C9SU2BrI.png)](https://www.playbalatro.com/)
 
-# Balatro Gay Translation
+# Balatro Slutty Joker
 
 As requested by reddit
 
@@ -11,11 +11,7 @@ I will update this once this commit is in an official release ^^
 
 > **Disclaimer:** I don't know how up to date i can keep this, but i'll try
 
-# How do I install the new file?
-
-**There is two ways you can add this to your game:**
-
-## The better way: Balamod
+# How do I install this mod?
 
 1. **Close Balatro**
 2. Install [UwUDev/balamod](https://github.com/UwUDev/balamod) as explained in their Readme
