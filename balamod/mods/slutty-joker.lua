@@ -1,5 +1,5 @@
 patchedSlutty = false
-centerHook = initCenterHook()
+jokerHook = initJokerHook()
 
 if (sendDebugMessage == nil) then
     sendDebugMessage = function(_)
@@ -22,7 +22,7 @@ table.insert(mods,
                     -----------------------------------------
                     sendDebugMessage("Adding slutty joker to centers!")
 
-                    centerHook.addJoker(self, "j_slutty", "Slutty Joker", nil, true, 1, { x = 0, y = 0 }, nil, {extra = 2}, { "{X:red,C:white} X2 {} Mult", "if played hand contains", "a 6 and a 9"}, 1, true)
+                    jokerHook.addJoker(self, "j_slutty", "Slutty Joker", nil, true, 1, { x = 0, y = 0 }, nil, {extra = 2}, { "{X:red,C:white} X2 {} Mult", "if played hand contains", "a 6 and a 9"}, 1, true)
 
                     ---------------------------------------------
                     sendDebugMessage("Inserting slutty_joker into calculate_joker!")                    
