@@ -6,6 +6,9 @@ As requested by reddit
 
 Adds a joker that gives you a 2x multiplier if you play a 6 and a 9
 
+It should work now with the current commit of balamod with is (at the date of writing) [4eb898161e7a84d96e89beb63eb1d05763421aaf](https://github.com/UwUDev/balamod/commit/4eb898161e7a84d96e89beb63eb1d05763421aaf)
+I will update this once this commit is in an official release ^^
+
 > **Disclaimer:** I don't know how up to date i can keep this, but i'll try
 
 # How do I install the new file?
@@ -21,5 +24,3 @@ Adds a joker that gives you a 2x multiplier if you play a 6 and a 9
 5. You can now launch Balatro, select the english language and enjoy!
 
 > This should work even when the game updates. If it doesn't, please open an Issue.
-
-> **Important:** This only works with Balamod 0.1.9 which is not released as of now. You can build it from master though.
