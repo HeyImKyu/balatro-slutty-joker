@@ -9,6 +9,8 @@ Adds a joker that gives you a 2x multiplier if you play a 6 and a 9
 It should work now with the current commit of balamod with is (at the date of writing) [4eb898161e7a84d96e89beb63eb1d05763421aaf](https://github.com/UwUDev/balamod/commit/4eb898161e7a84d96e89beb63eb1d05763421aaf)
 I will update this once this commit is in an official release ^^
 
+Art by the lovely [@Skadi](https://github.com/Skadihehe)
+
 > **Disclaimer:** I don't know how up to date i can keep this, but i'll try
 
 # How do I install this mod?
