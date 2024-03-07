@@ -17,6 +17,6 @@ I will update this once this commit is in an official release ^^
 2. Install [UwUDev/balamod](https://github.com/UwUDev/balamod) as explained in their Readme
 3. Download the 3 folders from this repo in `/balamod`
 4. Put them into `%appdata%/Balatro`
-5. You can now launch Balatro, select the english language and enjoy!
+5. You can now launch Balatro and enjoy!
 
 > This should work even when the game updates. If it doesn't, please open an Issue.
